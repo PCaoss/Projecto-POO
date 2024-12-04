@@ -42,7 +42,7 @@
                       <Component id="jLabel5" min="-2" pref="37" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="cboDia" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -370,6 +370,7 @@
                       <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel4" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jLabel6" max="32767" attributes="0"/>
+                      <Component id="jLabel17" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -378,6 +379,7 @@
                       <Component id="txtDia" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtMasajista" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtSucursal" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtTipoMasaje" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
@@ -411,7 +413,12 @@
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtMasaje" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtTipoMasaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -481,6 +488,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDia">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel17">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Tipo de Masaje"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTipoMasaje">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>

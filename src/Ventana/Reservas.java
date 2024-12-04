@@ -16,6 +16,7 @@ public class Reservas extends javax.swing.JFrame {
     /**
      * Creates new form Reservas
      */
+    String sede, tmasaje;
     public Reservas() {
         initComponents();
         Sucursal();
@@ -32,12 +33,22 @@ public class Reservas extends javax.swing.JFrame {
         this.setVisible(false);
     }
     
-    public void Sucursal(){
+    public void setSucursal(String s){
         //rellena el campo de texto Sucursal
-       
-        Lobby l = new Lobby();
-       
-        txtSucursal.setText(l.getCiudad());
+        this.sede = s;  
+        Sucursal();
+    }
+    public void Sucursal(){
+        txtSucursal.setText(sede);
+    }
+    
+    public void setTipoMasaje(String t){
+        //rellena el campo de texto Tipo de Masaje
+        this.tmasaje = t;  
+        TMasaje();
+    }
+    public void TMasaje(){
+        txtTipoMasaje.setText(tmasaje);
     }
     
     public void Dia(){
@@ -77,6 +88,8 @@ public class Reservas extends javax.swing.JFrame {
         txtMasaje = new javax.swing.JTextField();
         txtHora = new javax.swing.JTextField();
         txtDia = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        txtTipoMasaje = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         chkCuello = new javax.swing.JCheckBox();
@@ -303,6 +316,11 @@ public class Reservas extends javax.swing.JFrame {
 
         txtDia.setEditable(false);
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setText("Tipo de Masaje");
+
+        txtTipoMasaje.setEditable(false);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -314,14 +332,16 @@ public class Reservas extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtMasaje, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                     .addComponent(txtHora)
                     .addComponent(txtDia)
                     .addComponent(txtMasajista)
-                    .addComponent(txtSucursal))
+                    .addComponent(txtSucursal)
+                    .addComponent(txtTipoMasaje))
                 .addGap(19, 19, 19))
         );
         jPanel6Layout.setVerticalGroup(
@@ -347,7 +367,11 @@ public class Reservas extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtMasaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(txtTipoMasaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Masajes"));
@@ -632,7 +656,7 @@ public class Reservas extends javax.swing.JFrame {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addComponent(cboDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -860,15 +884,13 @@ public class Reservas extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkKaren;
     private javax.swing.JCheckBox chkOscar;
     private javax.swing.JCheckBox chkPiernas;
-    private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -882,7 +904,6 @@ public class Reservas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -893,5 +914,6 @@ public class Reservas extends javax.swing.JFrame {
     private javax.swing.JTextField txtMasaje;
     private javax.swing.JTextField txtMasajista;
     private javax.swing.JTextField txtSucursal;
+    private javax.swing.JTextField txtTipoMasaje;
     // End of variables declaration//GEN-END:variables
 }
